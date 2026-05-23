@@ -20902,45 +20902,6 @@ window.onload = function() {
 				<div id="categoryControls"></div>
 				<div id="elementControls"></div>
 			</div>
-			<nav id="extraInfo"><small id="extraLinks"><a href="https://sandboxels.r74n.com/changelog" id="changelogButton" target="_blank">Changelog</a> <a href="https://sandboxels.R74n.com/feedback" target="_blank" style="color:lime;" id="feedbackButton">Feedback</a> <a href="https://store.steampowered.com/app/3664820/Sandboxels/" target="_blank" id="steamButton" title="View Sandboxels on Steam" style="color:#2cb4ee;">STEAM</a> <a href="https://sandboxels.wiki.gg/" target="_blank" id="wikiButton" title="Official Sandboxels Wiki - wiki.gg" style="color:white;">Wiki</a> <a id="moreSocial" href="https://twitter.com/R74nCom" rel="me" target="_blank">Twitter</a> <a href="https://discord.gg/ejUc6YPQuS" target="_blank" style="color:#2f60ff;">Discord</a><span id="install-button" style="display:none">&nbsp;<a onclick="deferredPrompt.prompt(); return false" href="#" style="text-shadow: 0px 2px 10px #ff00ff; cursor:pointer">Install Offline</a></span>
-				<!--<br><br><a style="color:lime" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeYMbngtbBHZ7hkz8jpbHl7TiAItqukrhtntKgAHjH30fY08A/viewform?usp=sf_link">FILL OUT THE CENSUS<span style="color:red">(NEW)</span></a>-->
-				<!-- <br><br><a style="color:lime" target="_blank" href="https://store.steampowered.com/app/3664820/Sandboxels/">SANDBOXELS ON STEAM<span style="color:red">(NEW)</span></a> -->
-				<!--<br><br><a style="color:lime" target="_blank" href="https://r74n.com/">PLAY AD-FREE ON STEAM<span style="color:red">(NEW)</span></a>-->
-			</small></nav>
-			<script>
-				// version check
-				if (!settings["lastversion"] || settings["lastversion"]!==currentversion) {
-					document.getElementById("changelogButton").insertAdjacentHTML("beforeend",`<span style="color:red">(NEW)</span>`);
-				}
-				document.getElementById("changelogButton").addEventListener("click", function() {
-					document.getElementById("changelogButton").innerText = lang["gui.changelogButton"] || "Changelog";
-					document.getElementById("changelogButton").innerText = langKey("gui.changelogButton","Changelog")
-					setSetting("lastversion",currentversion);
-				});
-				// wiki clicked check
-				/*if (!settings["clickedwiki"]) {
-					document.getElementById("wikiButton").insertAdjacentHTML("beforeend",`<span style="color:red">(NEW)</span>`);
-				}
-				document.getElementById("wikiButton").addEventListener("click", function() {
-					document.getElementById("wikiButton").innerHTML = "Wiki";
-					setSetting("clickedwiki",true);
-				});*/
-				var socials = {
-					"<span style='color:#1DA1F2'>Twitter</span>": "https://x.com/intent/follow?source=followbutton&variant=1.0&screen_name=R74nCom",
-					"<span style='color:#FF5700'>Reddit</span>": "https://reddit.com/r/Sandboxels",
-					"<span style='color:#208BFE'>Bluesky</span>": "https://bsky.app/profile/r74n.com",
-					"<span style='color:#00f2ea'>Tik</span><span style='color:#ff0050'>Tok</span>": "https://tiktok.com/@r74n.com",
-					"<span style='color:#ff0055'>Instagram</span>": "https://www.instagram.com/r74ndev/reels/",
-					"<span style='color:#FFFFFF'>You</span><span style='background-color:#FF0000;color:#FFFFFF'>Tube</span>": "https://www.youtube.com/@R74n/shorts?sub_confirmation=1"
-				};
-				// replace #moreSocial with a random social link (key=title, value=url)
-				if (Object.keys(socials).length > 0) {
-					var socialKeys = Object.keys(socials);
-					var randomSocial = socialKeys[Math.floor(Math.random() * socialKeys.length)];
-					document.getElementById("moreSocial").innerHTML = randomSocial;
-					document.getElementById("moreSocial").href = socials[randomSocial];
-				}
-			</script>
 		</div>
 		<div id="infoParent">
 			<div id="infoScreen"> <!--Element Info Page-->
